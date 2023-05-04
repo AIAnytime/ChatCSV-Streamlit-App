@@ -7,11 +7,12 @@ from pandasai import PandasAI
 
 load_dotenv()
 
+# store the API key in Secrets and add here
 openai_api_key = os.getenv("OPENAI_API_KEY")
-print(openai_api_key)
+
 
 def chat_with_csv(df,prompt):
-    llm = OpenAI()
+    llm = OpenAI(api_token=openai_api_key)
     pandas_ai = PandasAI(llm)
     result = pandas_ai.run(df, prompt=prompt)
     print(result)
