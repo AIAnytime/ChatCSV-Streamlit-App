@@ -7,7 +7,7 @@ from pandasai import PandasAI
 
 load_dotenv()
 
-# store the API key in Secrets and add here
+
 openai_api_key = os.getenv("OPENAI_API_KEY")
 
 
